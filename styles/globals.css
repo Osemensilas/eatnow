@@ -79,6 +79,7 @@ body{
 .logo-container{
   height: 60px;
   width: 150px;
+  cursor: pointer;
 }
 
 .logo{

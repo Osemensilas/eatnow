@@ -1,11 +1,19 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
+
+    const router = useRouter();
+
+    const logoClicked = () => {
+        router.push('/');
+    }
+
     return ( 
         <>
         <header id="header">
             <div className="header">
-                <div className="logo-container">
+                <div className="logo-container" onClick={logoClicked}>
                     <img src="/" alt="" className="logo" />
                 </div>
                 <form className="search-form">
@@ -14,7 +22,7 @@ const Header = () => {
                 </form>
                 <div className="signup-container">
                     <div className="no-user active">
-                        <Link href="/" className="help-link text-small"><i className="fa fa-question-circle"></i> Help</Link>
+                        <Link href="/help" className="help-link text-small"><i className="fa fa-question-circle"></i> Help</Link>
                         <Link href="/" className="login-btn btn"><i className="fa fa-user"></i> Login</Link>
                     </div>
                     <div className="active-user">
