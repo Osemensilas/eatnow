@@ -61,6 +61,62 @@ body{
   font-size: 16px;
 }
 
+#signInContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#signInContainer::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--dark);
+    opacity: 0.4;
+}
+
+#signInContainer.active{
+    display: flex;
+}
+
+.signin-form{
+  position: relative;
+  height: max-content;
+  width: 500px;
+  background: var(--background);
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.signin-form-top{
+  height: max-content;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signin-btn-cancel{
+  padding: 5px 7px;
+  background: var(--primary);
+  border: none;
+  border-radius: 3px;
+}
+
+.signin-btn-cancel i{
+  color: var(--background);
+  font-size: 20px;
+  cursor: pointer;
+}
+
 /*Header Begins*/
 #header{
   height: 100px;

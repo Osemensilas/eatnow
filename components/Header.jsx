@@ -1,12 +1,27 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styles from "../styles/Home.module.css";
+import { useRef } from "react";
 
 const Header = () => {
 
     const router = useRouter();
+    const signinRef = useRef(null);
 
     const logoClicked = () => {
         router.push('/');
+    }
+
+    const loginClick = () => {
+        const signinContainer = signinRef.current;
+
+        signinContainer.classList.add('active');
+    }
+
+    const cancelClicked = () => {
+        const signinContainer = signinRef.current;
+
+        signinContainer.classList.remove('active');
     }
 
     return ( 
@@ -23,7 +38,7 @@ const Header = () => {
                 <div className="signup-container">
                     <div className="no-user active">
                         <Link href="/help" className="help-link text-small"><i className="fa fa-question-circle"></i> Help</Link>
-                        <Link href="/" className="login-btn btn"><i className="fa fa-user"></i> Login</Link>
+                        <button onClick={loginClick} className="login-btn btn"><i className="fa fa-user"></i> Login</button>
                     </div>
                     <div className="active-user">
                         <Link href="/"><i className="fa fa-shopping-cart"></i> Cart</Link>
@@ -40,6 +55,18 @@ const Header = () => {
                 </div>
             </div>
         </header>
+        <section id="signInContainer" ref={signinRef}>
+            <form onSubmit={(e) => e.preventDefault()} className="signin-form">
+                <div className="signin-form-top">
+                    <button onClick={cancelClicked} className="signin-btn-cancel">
+                        <i className="fa fa-times"></i>
+                    </button>
+                </div>
+                <div className="signin-form-bottom">
+
+                </div>
+            </form>
+        </section>
         </>
      );
 }
