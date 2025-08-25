@@ -23,6 +23,8 @@ const Header = () => {
                             <Link href="/"><i className="fa fa-user"></i> SoloTech <i className="fa fa-chevron-down"></i></Link>
                             <ul className="active-user-menu">
                                 <li className="active-user-items"><Link href={"/"}>Profile</Link></li>
+                                <li className="active-user-items"><Link href={"/"}>Wallet</Link></li>
+                                <li className="active-user-items"><Link href={"/"}>Orders</Link></li>
                                 <li className="active-user-items"><Link href={"/"}>Sign Out</Link></li>
                             </ul>
                         </div>
