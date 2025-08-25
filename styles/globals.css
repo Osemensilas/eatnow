@@ -630,3 +630,145 @@ body{
 .frequent-drop-down-container.active{
   transform: rotate(-180deg);
 }
+
+/*Footer Begins*/
+
+#footer{
+  height: max-content;
+  width: 100%;
+  margin: 40px 0 0 0;
+  padding: 0 80px;
+}
+
+.footer{
+  height: max-content;
+  width: 100%;
+  border-top: 1px solid var(--grey);
+  padding: 40px 0 10px 0;
+}
+
+.footer-top{
+  height: max-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-top-left{
+  height: max-content;
+  width: 40%;
+}
+
+.footer-top-right{
+  height: max-content;
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-form{
+  height: max-content;
+  width: 100%;
+  padding: 20px 40px 0 0;
+}
+
+.footer-form label{
+  font-size: 12px;
+}
+
+.details{
+  position: relative;
+  height: max-content;
+  width: 100%;
+  margin: 20px 0;
+}
+
+#footer-email{
+  height: 40px;
+  width: 100%;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  outline: none;
+  padding: 0 30px;
+  color: var(--grey);
+  font-weight: 300;
+}
+
+.footer-btn{
+  position: absolute;
+  top: 0;
+  left: 75%;
+  height: 40px;
+  width: max-content;
+  padding: 0 25px;
+  background: var(--primary);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: var(--background);
+}
+
+.privacy-policy{
+  font-size: 12px;
+}
+
+.footer-right-content{
+  height: max-content;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-right-content h2{
+  font-size: 14px;
+}
+
+.footer-right-content a{
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.footer-middle{
+  height: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.footer-middle-content{
+  height: max-content;
+  width: max-content;
+}
+
+.footer-middle-content h2{
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-middle-imgs{
+  height: max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-middle-imgs img{
+  height: 25px;
+  width: 25px;
+}
+
+.footer-bottom{
+  height: max-content;
+  width: 100%;
+}
+
+.footer-bottom p{
+  font-size: 12px;
+}
