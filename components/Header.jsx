@@ -84,6 +84,12 @@ const Header = () => {
                     <div className="forget-pass-container">
                         <Link href={"/"}>Forget Password?</Link>
                     </div>
+                    <div className="signin-btn-container">
+                        <button className="signin-btn">Login</button>
+                    </div>
+                    <div className="dont">
+                        Don't have an account? <Link href={"/"}>Sign Up In Seconds</Link>
+                    </div>
                 </div>
             </form>
         </section>
