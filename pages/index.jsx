@@ -64,7 +64,7 @@ export default function Home() {
             </div>
             <div className="hero-content-box-bottom">
               <button className="hero-food"><i className="fa fa-concierge-bell"></i> Find Food</button>
-              <button className="hero-resturant">Find Resturants</button>
+              <button className="hero-resturant"><i className="fas fa-store"></i> Find Resturants</button>
             </div>
           </div>
         </div>

@@ -362,7 +362,7 @@ body{
 
 .hero-content-box{
   height: max-content;
-  width: 500px;
+  width: 550px;
   background: var(--background);
   border-radius: 10px;
 }
