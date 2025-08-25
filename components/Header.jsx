@@ -67,10 +67,22 @@ const Header = () => {
                 </div>
                 <div className="signin-form-bottom">
                     <h2>Welcome Back!!!</h2>
+                    <p>Login below or create a new EatNow account</p>
                     <div className="signin-user-option">
                         <button className="active">Vendors</button>
                         <button>Riders</button>
                         <button>Customers</button>
+                    </div>
+                    <div className="signin-details">
+                        <label htmlFor="email">Email</label>
+                        <input type="text" id="email" className="signin-detail" placeholder="Enter your email address" />
+                    </div>
+                    <div className="signin-details">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" className="signin-detail" placeholder="Enter your password" />
+                    </div>
+                    <div className="forget-pass-container">
+                        <Link href={"/"}>Forget Password?</Link>
                     </div>
                 </div>
             </form>
