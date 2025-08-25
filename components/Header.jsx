@@ -58,12 +58,20 @@ const Header = () => {
         <section id="signInContainer" ref={signinRef}>
             <form onSubmit={(e) => e.preventDefault()} className="signin-form">
                 <div className="signin-form-top">
+                    <button onClick={cancelClicked} className="goBack">
+                        <i className="fa fa-arrow-left"></i> Back
+                    </button>
                     <button onClick={cancelClicked} className="signin-btn-cancel">
                         <i className="fa fa-times"></i>
                     </button>
                 </div>
                 <div className="signin-form-bottom">
-
+                    <h2>Welcome Back!!!</h2>
+                    <div className="signin-user-option">
+                        <button className="active">Vendors</button>
+                        <button>Riders</button>
+                        <button>Customers</button>
+                    </div>
                 </div>
             </form>
         </section>
