@@ -46,7 +46,7 @@ const Footer = () => {
                             <Link href={"/"}>Email: info@eatnow.com</Link>
                             <div className="footer-social-conteiner">
                                 <a href="#" target="_blank">
-                                    <i className="fa-brands fa-x-twitter"></i>
+                                    <i className="fa-twitter"></i>
                                 </a>
                                 <a href="#" target="_blank">
                                     <i className="fa fa-facebook"></i>

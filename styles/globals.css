@@ -154,6 +154,20 @@ body{
   padding: 0 80px;
 }
 
+.hero-img{
+  position: absolute;
+  top: 48%;
+  left: 55%;
+  height: 250px;
+  width: 600px;
+  display: none;
+}
+
+.hero-img.active{
+  transition: 0.3s ease-in-out;
+  display: block;
+}
+
 .hero-content h2,
 .hero-content p{
   color: var(--background);
@@ -296,19 +310,29 @@ body{
 .popular-content{
   height: max-content;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
   overflow-x: hidden;
 }
 
-.popular-card{
-  height: 220px;
-  width: 220px;
+.popular-content-cards {
+  display: flex;              
+  gap: 10px;
+  overflow-x: auto;           
+  scroll-behavior: smooth;
+  scrollbar-width: none;      
+}
+
+.popular-content-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.popular-card {
+  flex: 0 0 auto;            
+  width: 220px;  
+  height: 250px;             
   border-radius: 10px;
   border: 1px solid var(--lightGrey);
-  text-decoration: none;
   background: var(--lighterGrey);
+  text-decoration: none;
 }
 
 .popular-card-top{

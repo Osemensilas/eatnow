@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect,useRef } from "react";
 
 export default function Home() {
 
@@ -16,12 +17,55 @@ export default function Home() {
     }
   }
 
+  useEffect(() => {
+    const heroImgs = document.querySelectorAll('.hero-img');
+
+    let initial = 0;
+    heroImgs[initial].classList.add('active');
+
+    setInterval(() => {
+      initial++;
+
+      if (initial === heroImgs.length){
+        initial = 0;
+      }
+
+      heroImgs[initial].classList.add('active');
+
+      for (let i = 0; i < heroImgs.length; i++){
+        if (i !== initial){
+          heroImgs[i].classList.remove('active');
+        }
+      }
+    }, 10000)
+  },[])
+
+  const cardRef = useRef(null);
+
+  const rightBtn = (e) => {
+
+    if (cardRef.current){
+        cardRef.current.scrollLeft += 250;
+    }
+  }
+
+  const leftBtn = () => {
+
+    if (cardRef.current){
+        cardRef.current.scrollLeft -= 250;
+    }
+  }
+
   return (
     <>
       <Head>
         <title>EatNow - Home Page</title>
       </Head>
       <section id="hero">
+        <img src="/" alt="" className="hero-img" />
+        <img src="/" alt="" className="hero-img" />
+        <img src="/" alt="" className="hero-img" />
+        <img src="/" alt="" className="hero-img" />
         <div className="hero-content">
           <h2 className="text-largest">What's your next bite?</h2>
           <p className="comment">Within a few clicks, find meals that are accessible near you</p>
@@ -47,65 +91,67 @@ export default function Home() {
           <header className="popular-container-header">
             <h2>Popular Categories</h2>
             <div className="slide-icon-container">
-              <button><i className="fa fa-arrow-left"></i></button>
-              <button><i className="fa fa-arrow-right"></i></button>
+              <button onClick={leftBtn}><i className="fa fa-arrow-left"></i></button>
+              <button onClick={rightBtn}><i className="fa fa-arrow-right"></i></button>
             </div>
           </header>
           <div className="popular-content">
-            <Link href={"/"} className="popular-card">
-              <div className="popular-card-top">
-                <img src="/" alt="" />
-              </div>
-              <div className="popular-card-bottom">
-                <h3 className="">Burger & Fast food</h3>
-                <p>21 Resturants</p>
-              </div>
-            </Link>
-            <Link href={"/"} className="popular-card">
-              <div className="popular-card-top">
-                <img src="/" alt="" />
-              </div>
-              <div className="popular-card-bottom">
-                <h3 className="">Salads</h3>
-                <p>32 Resturants</p>
-              </div>
-            </Link>
-            <Link href={"/"} className="popular-card">
-              <div className="popular-card-top">
-                <img src="/" alt="" />
-              </div>
-              <div className="popular-card-bottom">
-                <h3 className="">Pasta & Casual</h3>
-                <p>4 Resturants</p>
-              </div>
-            </Link>
-            <Link href={"/"} className="popular-card">
-              <div className="popular-card-top">
-                <img src="/" alt="" />
-              </div>
-              <div className="popular-card-bottom">
-                <h3 className="">Pizza</h3>
-                <p>32 Resturants</p>
-              </div>
-            </Link>
-            <Link href={"/"} className="popular-card">
-              <div className="popular-card-top">
-                <img src="/" alt="" />
-              </div>
-              <div className="popular-card-bottom">
-                <h3 className="">Breakfast</h3>
-                <p>4 Resturants</p>
-              </div>
-            </Link>
-            <Link href={"/"} className="popular-card">
-              <div className="popular-card-top">
-                <img src="/" alt="" />
-              </div>
-              <div className="popular-card-bottom">
-                <h3 className="">Soup</h3>
-                <p>32 Resturants</p>
-              </div>
-            </Link>
+            <div className="popular-content-cards" ref={cardRef}>
+              <Link href={"/"} className="popular-card">
+                <div className="popular-card-top">
+                  <img src="/" alt="" />
+                </div>
+                <div className="popular-card-bottom">
+                  <h3 className="">Burger & Fast food</h3>
+                  <p>21 Resturants</p>
+                </div>
+              </Link>
+              <Link href={"/"} className="popular-card">
+                <div className="popular-card-top">
+                  <img src="/" alt="" />
+                </div>
+                <div className="popular-card-bottom">
+                  <h3 className="">Salads</h3>
+                  <p>32 Resturants</p>
+                </div>
+              </Link>
+              <Link href={"/"} className="popular-card">
+                <div className="popular-card-top">
+                  <img src="/" alt="" />
+                </div>
+                <div className="popular-card-bottom">
+                  <h3 className="">Pasta & Casual</h3>
+                  <p>4 Resturants</p>
+                </div>
+              </Link>
+              <Link href={"/"} className="popular-card">
+                <div className="popular-card-top">
+                  <img src="/" alt="" />
+                </div>
+                <div className="popular-card-bottom">
+                  <h3 className="">Pizza</h3>
+                  <p>32 Resturants</p>
+                </div>
+              </Link>
+              <Link href={"/"} className="popular-card">
+                <div className="popular-card-top">
+                  <img src="/" alt="" />
+                </div>
+                <div className="popular-card-bottom">
+                  <h3 className="">Breakfast</h3>
+                  <p>4 Resturants</p>
+                </div>
+              </Link>
+              <Link href={"/"} className="popular-card">
+                <div className="popular-card-top">
+                  <img src="/" alt="" />
+                </div>
+                <div className="popular-card-bottom">
+                  <h3 className="">Soup</h3>
+                  <p>32 Resturants</p>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
