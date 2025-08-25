@@ -1,0 +1,83 @@
+#hero{
+    height: max-content;
+    width: 100%;
+    padding: 0 80px;
+}
+
+.heroContent{
+    height: max-content;
+    width: 100%;
+    border-top: 1px solid var(--grey);
+    padding: 50px 0;
+}
+
+.heroContent header{
+    height: max-content;
+    width: 100%;
+    padding: 0 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.heroContent header h2{
+    font-size: 25px;
+}
+
+.headerLine{
+  position: relative;
+  height: 1px;
+  width: 300px;
+}
+
+.headerLine::after{
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%); 
+  border-left: solid 150px transparent;
+  border-right: solid 150px transparent; 
+  border-bottom: solid 6px var(--primary);
+}
+
+.heroContent header p{
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.fagContent{
+    height: max-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.faqCard {
+  flex: 0 0 auto;            
+  width: 80%;  
+  height: 300px;             
+  border-radius: 10px;
+  border: 1px solid var(--lightGrey);
+  background: var(--lighterGrey);
+  text-decoration: none;
+  margin-bottom: 80px;
+}
+
+.faqCardTop{
+  height: 75%;
+  width: 100%;
+}
+
+.faqCard img{
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.faqCardBottom{
+    height: 25%;
+    width: 100%;
+    padding: 10px 20px;
+}
